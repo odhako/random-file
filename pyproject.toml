@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "random-file"
-version = "0.3.0"
+version = "0.4.0"
 description = "Just a button to open random file from directory where executable is placed."
 authors = ["odhako <odhako@gmail.com>"]
 readme = "README.md"

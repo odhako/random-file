@@ -1,7 +1,9 @@
 import os
+import sys
 import random
 import keyboard
 from tkinter import *
+import tkinter.messagebox as messagebox
 
 
 def get_random_file(path):
@@ -9,7 +11,13 @@ def get_random_file(path):
     for r, d, f in os.walk(path):
         for file in f:
             files.append(os.path.join(r, file))
-    return random.choice(files)
+    if len(files) == 1:
+        messagebox.showerror("Error", "Need some files")
+        sys.exit()
+    file = random.choice(files)
+    while os.path.splitext(file)[1] == '.exe':
+        file = random.choice(files)
+    return file
 
 
 def open_file():

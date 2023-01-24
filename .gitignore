@@ -1,0 +1,5 @@
+build/
+dist/
+*.spec
+run_pyinstaller.py
+poetry.lock

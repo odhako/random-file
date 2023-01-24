@@ -4,3 +4,4 @@ dist/
 run_pyinstaller.py
 poetry.lock
 .idea/
+Makefile
